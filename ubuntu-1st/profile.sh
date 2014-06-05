@@ -5,6 +5,7 @@ sed -i "s/^alias l='ls \-CF'/#alias l='ls -CF'/g" ~/.bashrc
 if [[ -z `grep "^alias \.\.=" ~/.bashrc` ]]; then
     echo "alias ..='cd ..'" >> ~/.bashrc
     echo "alias l='ls -laG'" >> ~/.bashrc
+    echo "alias gd='git diff --color'" >> ~/.bashrc
     echo "export VISUAL=vim" >> ~/.bashrc
 fi
 
