@@ -1,4 +1,5 @@
 #!/bin/bash
+
 set -e
 
 USERNAME=iroslyakov
@@ -9,20 +10,28 @@ if [[ -z `cat /etc/sudoers | grep ${USERNAME}` ]]; then
     chmod 440 /etc/sudoers
 fi
 
-if [[ ! -f ~${USERNAME}/.bashrc || -z `cat ~${USERNAME}/.bashrc | grep "#applied"` ]]; then
-    echo "" >> ~${USERNAME}/.bashrc
-    echo "#applied" >> ~${USERNAME}/.bashrc
-    echo "alias ..='cd ..'" >> ~${USERNAME}/.bashrc
-    echo "alias l='ls -laG'" >> ~${USERNAME}/.bashrc
-    echo "alias gd='git diff --color'" >> ~${USERNAME}/.bashrc
-    echo "export VISUAL=vim" >> ~${USERNAME}/.bashrc
-fi
+change_profile() {
+    USER_PATH="$1"
 
-if [[ ! -f /home/${USERNAME}/.vimrc ]]; then
-    echo ":syntax on" >> ~${USERNAME}/.vimrc
-    echo ":set hlsearch" >> ~${USERNAME}/.vimrc
-    echo ":set ts=4" >> ~${USERNAME}/.vimrc
-    echo ":set sts=4" >> ~${USERNAME}/.vimrc
-    echo ":set sw=4" >> ~${USERNAME}/.vimrc
-    echo ":set modeline" >> ~${USERNAME}/.vimrc
-fi
+    if [[ ! -f ${USER_PATH}/.bashrc || -z `cat ${USER_PATH}/.bashrc | grep "#applied"` ]]; then
+        echo "" >> ${USER_PATH}/.bashrc
+        echo "#applied" >> ${USER_PATH}/.bashrc
+        echo "alias ..='cd ..'" >> ${USER_PATH}/.bashrc
+        echo "alias l='ls -laG'" >> ${USER_PATH}/.bashrc
+        echo "alias gd='git diff --color'" >> ${USER_PATH}/.bashrc
+        echo "export VISUAL=vim" >> ${USER_PATH}/.bashrc
+    fi
+
+    if [[ ! -f ${USER_PATH}/.vimrc ]]; then
+        echo ":syntax on" >> ${USER_PATH}/.vimrc
+        echo ":set hlsearch" >> ${USER_PATH}/.vimrc
+        echo ":set ts=4" >> ${USER_PATH}/.vimrc
+        echo ":set sts=4" >> ${USER_PATH}/.vimrc
+        echo ":set sw=4" >> ${USER_PATH}/.vimrc
+        echo ":set modeline" >> ${USER_PATH}/.vimrc
+    fi
+
+}
+
+change_profile "/home/${USERNAME}"
+change_profile "/root"
