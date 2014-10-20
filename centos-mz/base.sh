@@ -2,4 +2,4 @@
 
 set -e
 
-yum install -y vim || :
+yum install -y vim
