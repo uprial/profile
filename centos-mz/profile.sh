@@ -13,6 +13,7 @@ fi
 change_profile() {
     USER_PATH="$1"
 
+    [[ -d ${USER_PATH} ]] || return 0
     if [[ ! -f ${USER_PATH}/.bashrc || -z `cat ${USER_PATH}/.bashrc | grep "#applied"` ]]; then
         echo "" >> ${USER_PATH}/.bashrc
         echo "#applied" >> ${USER_PATH}/.bashrc
