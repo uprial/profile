@@ -1,0 +1,6 @@
+yum install -y git
+ssh-keygen -t rsa -b 2048
+# add the key here: https://github.com/settings/ssh
+git clone git@github.com:uprial/profile.git
+cd profile/centos7-1st
+./install.sh
