@@ -22,3 +22,7 @@ if [[ ! -f ~/.vimrc || -z `grep "^:syntax on" ~/.vimrc` ]]; then
     echo "set et" >> ~/.vimrc
 fi
 
+if [[ ! -f ~/.gitconfig || -z `grep "^[color]" ~/.gitconfig` ]]; then
+    echo "[color]" >> ~/.gitconfig
+    echo "    ui = true" >> ~/.gitconfig
+fi
