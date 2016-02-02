@@ -2,7 +2,7 @@
 
 set -e
 
-USERNAME=iroslyakov
+USERNAME=mz
 
 if [[ -z `cat /etc/sudoers | grep ${USERNAME}` ]]; then
     chmod 770 /etc/sudoers
