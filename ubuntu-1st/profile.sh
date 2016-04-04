@@ -8,15 +8,13 @@ if [[ -z `grep "^alias \.\.=" ~/.bashrc` ]]; then
     echo "alias ..='cd ..'" >> ~/.bashrc
     echo "alias l='ls -laG'" >> ~/.bashrc
     echo "alias gd='git diff --color'" >> ~/.bashrc
+    echo "alias r='screen -RD mine'" >> ~/.bashrc
     echo "export VISUAL=vim" >> ~/.bashrc
-fi
-
-if [[ -z `grep "^alias r=" ~/.profile` ]]; then
-    echo "alias r='screen -RD mine'" >> ~/.profile
 fi
 
 if [[ ! -f ~/.vimrc || -z `grep "^:syntax on" ~/.vimrc` ]]; then
     echo ":syntax on" >> ~/.vimrc
+    echo "set hlsearch" >> ~/.vimrc
     echo "set ts=4" >> ~/.vimrc
     echo "set sts=4" >> ~/.vimrc
     echo "set sw=4" >> ~/.vimrc
@@ -24,3 +22,7 @@ if [[ ! -f ~/.vimrc || -z `grep "^:syntax on" ~/.vimrc` ]]; then
     echo "set et" >> ~/.vimrc
 fi
 
+if [[ ! -f ~/.gitconfig || -z `grep "^[color]" ~/.gitconfig` ]]; then
+    echo "[color]" >> ~/.gitconfig
+    echo "    ui = true" >> ~/.gitconfig
+fi
