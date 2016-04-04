@@ -8,4 +8,5 @@ if ! rpm -q yandex-disk; then
     yum install -y yandex-disk
 
     yandex-disk setup
+    service yandex-disk status
 fi
