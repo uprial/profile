@@ -1,0 +1,13 @@
+#!/bin/bash
+
+set -e
+
+FLAGS=""
+if [[ "$1" == "-f" ]]; then
+    FLAGS="${FLAGS} --force"
+fi
+
+parent=$(gdrive list --query "name = 'Mine'" --no-header | cut -f1 -d' ')
+gdrive download query ${FLAGS} \
+                      --recursive \
+                      --path ~/Mine "'${parent}' in parents"
