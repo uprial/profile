@@ -6,7 +6,7 @@ sed -i "s/^alias l='ls \-CF'/#alias l='ls -CF'/g" ~/.bashrc
 
 if [[ -z `grep "^alias \.\.=" ~/.bashrc` ]]; then
     echo "" >> ~/.bashrc
-    echo "# Rial local definitions" >> ~/.bashrc
+    echo "# Rial local aliases definitions" >> ~/.bashrc
     echo "alias ..='cd ..'" >> ~/.bashrc
     echo "alias l='ls -laG'" >> ~/.bashrc
     echo "alias gd='git diff --color'" >> ~/.bashrc
