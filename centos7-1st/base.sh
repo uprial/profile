@@ -15,3 +15,5 @@ yum install -y \
                screen \
                unzip \
                vim
+
+pip install --upgrade pip
