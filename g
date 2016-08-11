@@ -1,3 +1,8 @@
-#! /usr/bin/env bash
+#!/usr/bin/env bash
 
-grep -RI --color "$@" *
+if [ -z "$@" ]; then
+	echo "Usage:"
+	echo "  g     PATTERN" &1>2
+	exit 2
+fi
+grep --recursive --ignore-case --color "$@" *
