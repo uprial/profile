@@ -6,6 +6,6 @@ set -e
 
 source ~/.bashrc
 
-gdrive sync list > /dev/null
+gdrive sync list
 
 `dirname $0`/bin/google-download || :
