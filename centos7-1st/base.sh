@@ -14,6 +14,7 @@ yum install -y \
                pylint \
                screen \
                unzip \
-               vim
+               vim \
+               python-pip
 
 pip install --upgrade pip
