@@ -12,9 +12,10 @@ yum install -y \
                gcc \
                ImageMagick-devel \
                pylint \
+               python-pip \
                screen \
+               tree \
                unzip \
-               vim \
-               python-pip
+               vim
 
 pip install --upgrade pip
