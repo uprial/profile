@@ -22,6 +22,7 @@ if [[ ! -f ~/.vimrc || -z `grep "^:syntax on" ~/.vimrc` ]]; then
     echo "set sw=4" >> ~/.vimrc
     echo "set modeline" >> ~/.vimrc
     echo "set et" >> ~/.vimrc
+    echo "set mouse=r" >> ~/.vimrc
 fi
 
 if [[ ! -f ~/.gitconfig || -z `grep "^[color]" ~/.gitconfig` ]]; then
