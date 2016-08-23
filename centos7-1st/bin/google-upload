@@ -2,6 +2,10 @@
 
 set -e
 
+if ! which gdrive 2>/dev/null; then
+    source ~/.bashrc
+fi
+
 if [[ "$1" != "" ]]; then
     FILES="$@"
 else
