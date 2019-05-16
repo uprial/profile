@@ -8,7 +8,7 @@ if gdrive help > /dev/null; then
     exit 0
 fi
 
-FILE=go1.6.linux-amd64.tar.gz
+FILE=go1.12.5.linux-amd64.tar.gz
 INSTALL_PATH=/usr/local
 
 if [ ! -f ${FILE} ]; then
