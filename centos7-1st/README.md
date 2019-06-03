@@ -9,3 +9,6 @@
     ./install.sh
 
 Add your host public key to `~/.ssh/authorized_keys`.
+
+TODO:
+    Save iptables (https://upcloud.com/community/tutorials/configure-iptables-centos/)
