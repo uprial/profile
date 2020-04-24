@@ -1,0 +1,22 @@
+#!/bin/bash
+
+set -e
+
+if ! which gdrive 2>/dev/null; then
+    source ~/.bashrc
+fi
+
+if [[ "$1" != "" ]]; then
+    FILES="$@"
+else
+    FILES=~/Mine/*
+fi
+
+parent=$(gdrive list --query "name = 'Mine'" --no-header | cut -f1 -d' ')
+
+echo ${FILES[@]}
+for filename in ${FILES[@]}; do
+    gdrive upload --parent "${parent}" \
+                  --recursive \
+                  ${filename}
+done
