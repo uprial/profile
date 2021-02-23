@@ -5,7 +5,7 @@
     # add the key here: https://github.com/settings/ssh
     echo -e "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
     git clone git@github.com:uprial/profile.git
-    cd profile/centos7-1st
+    cd profile/centos8-1st
     ./install.sh
 
 Add your host public key to `~/.ssh/authorized_keys`.
