@@ -1,0 +1,18 @@
+#!/bin/bash
+
+set -e
+
+YDP=/root/Yandex.Disk/
+
+if [ ! -d ${YDP} ]; then
+    echo "Directory not found: ${YDP}" &1>2
+    exit 1
+fi
+
+if [[ -z "$@" ]]; then
+    echo "Usage:"
+    echo "  yandex-upload     FILE" &1>2
+    exit 2
+fi
+
+cp $@ ${YDP}
