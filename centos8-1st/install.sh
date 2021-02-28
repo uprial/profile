@@ -12,6 +12,7 @@ source ~/.bashrc
 `dirname $0`/python.sh
 `dirname $0`/routes.sh
 `dirname $0`/httpd.sh
+`dirname $0`/yandex-disk.sh
 #`dirname $0`/nginx.sh
 cp -f `dirname $0`/../g /usr/local/bin/
 cp -f `dirname $0`/bin/* /usr/bin/
