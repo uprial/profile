@@ -2,5 +2,10 @@
 
 set -e
 
-yum install -y python-pip
-pip install PyYAML
+yum install -y \
+               pylint \
+               python3 \
+               python3-pip
+
+pip3 install --upgrade pip
+pip3 install PyYAML

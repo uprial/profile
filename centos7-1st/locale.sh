@@ -2,7 +2,7 @@
 
 set -e
 
-if [[ -z `grep "^LC_ALL=" ~/.bashrc` ]]; then
+if [[ -z `grep "^# Rial locale definitions" ~/.bashrc` ]]; then
     echo "" >> ~/.bashrc
     echo "# Rial locale definitions" >> ~/.bashrc
     echo 'export LC_ALL="en_US.UTF-8"' >> ~/.bashrc
