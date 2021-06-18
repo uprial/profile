@@ -11,7 +11,7 @@ if [[ -z `grep "^alias \.\.=" ~/.profile` ]]; then
     echo "alias l='ls -laG'" >> ~/.profile
     echo "alias gd='git diff --color'" >> ~/.profile
     echo "alias r='screen -RD mine'" >> ~/.profile
-    echo "alias gdcl=\"find /Volumes/IlyaT7/ -name '.DS_Store' -exec rm {} \; && find /Volumes/IlyaT7/ -name '._*' -exec rm {} \;\"" >> ~/.profile
+    echo "alias gdcl=\"find /Volumes/IlyaT7/ -name '.DS_Store' -exec rm {} \; ; find /Volumes/IlyaT7/ -name '._*' -exec rm {} \;\"" >> ~/.profile
     echo "export VISUAL=vim" >> ~/.profile
 fi
 
