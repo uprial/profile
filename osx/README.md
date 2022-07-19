@@ -4,5 +4,5 @@
     # add the key here: https://github.com/settings/ssh
     echo -e "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
     git clone git@github.com:uprial/profile.git
-    cd profile/centos8-1st
+    cd profile/osx
     ./install.sh

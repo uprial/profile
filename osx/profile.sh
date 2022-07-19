@@ -2,17 +2,19 @@
 
 set -e
 
-sed -i '' "s/^alias l='ls \-CF'/#alias l='ls -CF'/g" ~/.profile
+PROFILE=~/.zprofile
 
-if [[ -z `grep "^alias \.\.=" ~/.profile` ]]; then
-    echo "" >> ~/.profile
-    echo "# Rial local aliases definitions" >> ~/.profile
-    echo "alias ..='cd ..'" >> ~/.profile
-    echo "alias l='ls -laG'" >> ~/.profile
-    echo "alias gd='git diff --color'" >> ~/.profile
-    echo "alias r='screen -RD mine'" >> ~/.profile
-    echo "alias gdcl=\"find /Volumes/IlyaT7/ -name '.DS_Store' -exec rm {} \; ; find /Volumes/IlyaT7/ -name '._*' -exec rm {} \;\"" >> ~/.profile
-    echo "export VISUAL=vim" >> ~/.profile
+sed -i '' "s/^alias l='ls \-CF'/#alias l='ls -CF'/g" ${PROFILE}
+
+if [[ -z `grep "^alias \.\.=" ${PROFILE}` ]]; then
+    echo "" >> ${PROFILE}
+    echo "# Rial local aliases definitions" >> ${PROFILE}
+    echo "alias ..='cd ..'" >> ${PROFILE}
+    echo "alias l='ls -laG'" >> ${PROFILE}
+    echo "alias gd='git diff --color'" >> ${PROFILE}
+    echo "alias r='screen -RD mine'" >> ${PROFILE}
+    echo "alias gdcl=\"find /Volumes/IlyaT7/ -name '.DS_Store' -exec rm {} \; ; find /Volumes/IlyaT7/ -name '._*' -exec rm {} \;\"" >> ${PROFILE}
+    echo "export VISUAL=vim" >> ${PROFILE}
 fi
 
 if [[ ! -f ~/.vimrc || -z `grep "^:syntax on" ~/.vimrc` ]]; then
