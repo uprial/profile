@@ -14,6 +14,7 @@ if [[ -z `grep "^alias \.\.=" ${PROFILE}` ]]; then
     echo "alias gd='git diff --color'" >> ${PROFILE}
     echo "alias r='screen -RD mine'" >> ${PROFILE}
     echo "alias gdcl=\"find /Volumes/IlyaT7/ -name '.DS_Store' -exec rm {} \; ; find /Volumes/IlyaT7/ -name '._*' -exec rm {} \;\"" >> ${PROFILE}
+    echo "alias m='ssh -t root@m.iroslyakov.ru \"screen -RD mine\"'"
     echo "export VISUAL=vim" >> ${PROFILE}
 fi
 
