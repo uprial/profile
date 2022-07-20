@@ -2,6 +2,8 @@
 
 set -e
 
+apt update
+
 apt-get update -y
 git config --global user.name "Ilya Roslyakov"
 git config --global user.email uprial@gmail.com
