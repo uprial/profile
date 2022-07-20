@@ -2,6 +2,6 @@
 
 set -e
 
-ufw enable
+#ufw enable
 ufw allow 25565/tcp
 ufw allow 80/tcp
