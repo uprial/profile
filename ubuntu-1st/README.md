@@ -2,7 +2,7 @@
     ssh-keygen -t rsa -b 2048
     cat ~/.ssh/id_rsa.pub
 
-Add the key here: https://github.com/settings/ssh
+Add the key here: https://github.com/settings/ssh.
 
     echo -e "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 
@@ -11,3 +11,4 @@ Add the key here: https://github.com/settings/ssh
     cd profile/ubuntu-1st/
     ./install.sh
 
+Add your host public key to `~/.ssh/authorized_keys`.

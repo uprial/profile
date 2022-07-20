@@ -2,5 +2,5 @@
 
 set -e
 
-apt-get install -y python-pip
-pip install PyYAML
+# Not actually needed in Ubuntu-20
+apt install -y python3-pip
