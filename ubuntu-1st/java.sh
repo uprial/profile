@@ -2,4 +2,4 @@
 
 set -e
 
-apt install -y openjdk-17-jdk
+apt install -y openjdk-21-jdk
